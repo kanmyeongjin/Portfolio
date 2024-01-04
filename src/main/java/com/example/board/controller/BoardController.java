@@ -24,7 +24,7 @@ public class BoardController {
     //http://localhost:8080/ ==> "List"라는 이름의 템플릿을 사용(forward)하여 화면에 출력
     // list를 리턴한다는 것은
     // classpath:/templates/list.html
-    @GetMapping("/")
+    @GetMapping("/list")
     public String list(@RequestParam(name ="page", defaultValue = "1") int page, HttpSession session, Model model){ //HttpSssion, Model은 Spring이 자동으로 넣어준다.
         LoginInfo loginInfo = (LoginInfo)session.getAttribute("loginInfo");
         model.addAttribute("loginInfo", loginInfo);

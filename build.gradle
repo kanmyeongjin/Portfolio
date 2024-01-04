@@ -7,6 +7,13 @@ plugins {
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
+// 에러로 bootJar 설정 추가
+// Execution failed for task ':bootJar'.
+// Entry META-INF/MANIFEST.MF is a duplicate but no duplicate handling strategy has been set
+bootJar {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 java {
 	sourceCompatibility = '17'
 }
